@@ -20,9 +20,7 @@
 ;
 
 (define (length xs)
-  (if (null? xs)
-      0
-      (+ 1 (length (rest xs)))))
+  'not-implemented)
 
 ; List-of-numbers -> Number
 ;
@@ -32,9 +30,7 @@
 ;   (sum '(1 2 3 4)) => 10
 
 (define (sum xs)
-  (if (null? xs)
-      0
-      (+ (first xs) (sum (rest xs)))))
+  'not-implemented)
 
 ; List Integer -> Any
 ;
@@ -42,12 +38,10 @@
 ;
 ; Examples:
 ;  (nth 0 '(1 2 3)) => 1
-;  (nth 2 '(1 2 3)) => 3
+;  (nth 2 '(1 2 3)) => 3lecture02-scheme
 
 (define (nth n xs)
-  (if (= n 0)
-      (first xs)
-      (nth (- n 1) (rest xs))))
+  'not-implemented)
 
 ; List List -> List
 ;
@@ -66,9 +60,7 @@
 ;
 
 (define (concat xs ys)
-  (if (null? xs)
-      ys
-      (cons (first xs) (concat (rest xs) ys))))
+  'not-implemented)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Higher Order Function Examples

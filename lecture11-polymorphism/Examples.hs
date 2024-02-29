@@ -31,4 +31,11 @@ safeHead = undefined
 
 data Foo = F Int | G Char
 
--- instance Eq Foo where
+instance Eq Foo where
+    F x == F y = x == y
+    G x == G y = x == y
+    _   == _   = False
+
+    F x /= F y = x /= y
+    G x /= G y = x /= y
+    _   /= _   = True

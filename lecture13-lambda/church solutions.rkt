@@ -16,17 +16,17 @@
 
 (define succ
   (lambda (n)
-    (lambda (s)
-      (lambda (z) (s ((n s) z))))))
+    (lambda (f)
+      (lambda (z) (f ((n f) z))))))
 
 (define plus
- (lambda (m)
-   (lambda (n)
-     (lambda (s)
-       (lambda (z) ((m s) ((n s) z)))))))
+  (lambda (m)
+    (lambda (n) 
+      (lambda (f)
+        (lambda (z) ((n f) ((m f) z)))))))
 
 (define mult
   (lambda (m)
     (lambda (n)
-      (lambda (s)
-        (lambda (z) ((m (n s)) z))))))
+      (lambda (f)
+        (lambda (z) ((m (n f)) z))))))
